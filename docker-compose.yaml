@@ -1,0 +1,10 @@
+app:
+  api:
+    build: .
+    image: front-busitapp
+    container_name: front-busitapp
+    restart: on-failure
+    command: npm start
+    ports:
+      - "3000:3000"
+
