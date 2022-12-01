@@ -1,13 +1,12 @@
 FROM node:16-alpine
 
-WORKDIR /usr/app
+WORKDIR /home/beppler/git/Front-BusIt/
 
-COPY package*.json ./
-
-RUN npm i 
+RUN yarn i
 
 COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "run","start"]
+CMD ["yarn","start"]
+
