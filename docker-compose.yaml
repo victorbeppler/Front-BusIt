@@ -1,4 +1,6 @@
-app:
+version: '2.2'
+
+services:
   api:
     build: .
     image: front-busitapp
