@@ -1,5 +1,5 @@
 services:
-  front:
+  app:
     image: front-app
     build: .
     ports:
