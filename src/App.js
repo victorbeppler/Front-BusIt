@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import Home from "./Pages/Home";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Switch>
       <Route path="/" exact component={Login} />
       <Route path="/register" exact component={Register} />
+      <Route path="/home" exact component={Home} />
       </Switch>
     </BrowserRouter>
   );

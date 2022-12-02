@@ -1,5 +1,7 @@
 import { React, useState } from "react";
+import { useHistory } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
+import baseBack from "../../config/http-base-url-back.js";
 
 import "./styles.css";
 
@@ -10,12 +12,30 @@ export default function Register() {
   // eslint-disable-next-line
   const [password, setPassword] = useState("");
   // eslint-disable-next-line
+
+  const handleClick = async () => {
+    console.log("Clicou no botão");
+    useHistory.push("/");
+    // await baseBack.post(`/user/create`, {
+    //   name: name,
+    //   email: email,
+    //   birthdate: nascimento,
+    //   password: password,
+    // });
+  };
+  const showAlert = async () => {
+    await baseBack.post(`/user/create`, {
+      name: name,
+      email: email,
+      birthdate: nascimento,
+      password: password,
+    });
+  };
   return (
     <div className="container">
       <div className="container-register">
         <div className="wrap-register">
           <form className="register-form">
-            
             <span className="register-form-title">
               <img src={logoImg} alt="Jovem Programador" />
             </span>
@@ -65,7 +85,9 @@ export default function Register() {
             </div>
 
             <div className="container-register-form-btn">
-              <button className="register-form-btn">Cadastrar</button>
+              <button className="register-form-btn" onClick={showAlert}>
+                Cadastrar
+              </button>
             </div>
           </form>
         </div>

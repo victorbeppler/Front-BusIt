@@ -9,6 +9,9 @@ export default function Login() {
   // eslint-disable-next-line
   const [password, setPassword] = useState("");
   // eslint-disable-next-line
+  const showAlert = () => {
+    alert("I'm an alert");
+  };
   return (
     <div className="container">
       <div className="container-login">
@@ -27,6 +30,7 @@ export default function Login() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <span className="focus-input" data-placeholder="Email"></span>
+              {/* setEmail("teste") */}
             </div>
 
             <div className="wrap-input">
@@ -40,7 +44,9 @@ export default function Login() {
             </div>
 
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+              <button onClick={showAlert} className="login-form-btn">
+                Login
+              </button>
             </div>
 
             <div className="text-center">
