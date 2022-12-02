@@ -1,5 +1,7 @@
+version: '2.2'
+
 services:
-  app:
+  api:
     image: front-app
     build: .
     ports:
