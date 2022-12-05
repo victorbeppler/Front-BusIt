@@ -6,11 +6,11 @@ import Home from "./Pages/Home";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter forceRefresh={true}>
       <Switch>
-      <Route path="/" exact component={Login} />
-      <Route path="/register" exact component={Register} />
-      <Route path="/home" exact component={Home} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/register" exact component={Register} />
+        <Route path="/home" exact component={Home} />
       </Switch>
     </BrowserRouter>
   );

@@ -6,6 +6,7 @@ import baseBack from "../../config/http-base-url-back.js";
 import "./styles.css";
 
 export default function Register() {
+  let history = useHistory();
   const [name, setName] = useState("");
   const [nascimento, setNascimento] = useState("");
   const [email, setEmail] = useState("");
@@ -13,23 +14,20 @@ export default function Register() {
   const [password, setPassword] = useState("");
   // eslint-disable-next-line
 
-  const handleClick = async () => {
-    console.log("Clicou no botão");
-    useHistory.push("/");
-    // await baseBack.post(`/user/create`, {
-    //   name: name,
-    //   email: email,
-    //   birthdate: nascimento,
-    //   password: password,
-    // });
-  };
   const showAlert = async () => {
-    await baseBack.post(`/user/create`, {
-      name: name,
-      email: email,
-      birthdate: nascimento,
-      password: password,
-    });
+    try {
+      await Promise.all(
+        baseBack.post(`/user/create`, {
+          name: name,
+          email: email,
+          birthdate: nascimento,
+          password: password,
+        })
+      );
+      history.push("/teste");
+    } catch (err) {
+      alert(err.response.data);
+    }
   };
   return (
     <div className="container">

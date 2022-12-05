@@ -1,16 +1,32 @@
 import { React, useState } from "react";
+import { useHistory } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
+import baseBack from "../../config/http-base-url-back.js";
+
 // import { Container } from './styles';
 
 import "./styles.css";
 
 export default function Login() {
+  let history = useHistory();
   const [email, setEmail] = useState("");
   // eslint-disable-next-line
   const [password, setPassword] = useState("");
   // eslint-disable-next-line
-  const showAlert = () => {
-    alert("I'm an alert");
+  // history.push("/home");
+  const loginButton = async () => {
+    try {
+      const userCreate = await baseBack.post(`/user/login`, {
+        email: email,
+        password: password,
+      });
+      const result = userCreate.data;
+      if (result === "User logged") {
+        history.push("/home");
+      }
+    } catch (err) {
+      alert(err.response.data);
+    }
   };
   return (
     <div className="container">
@@ -44,7 +60,7 @@ export default function Login() {
             </div>
 
             <div className="container-login-form-btn">
-              <button onClick={showAlert} className="login-form-btn">
+              <button onClick={loginButton} className="login-form-btn">
                 Login
               </button>
             </div>
