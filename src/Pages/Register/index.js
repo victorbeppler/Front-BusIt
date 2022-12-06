@@ -29,7 +29,7 @@ export default function Register() {
     }
   };
   return (
-    <div className="container">
+    <>
       <div className="container-register">
         <div className="wrap-register">
           <form className="register-form" onSubmit={showAlert}>
@@ -89,6 +89,6 @@ export default function Register() {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 }
