@@ -82,7 +82,10 @@ body, html {
   color: #adadad;
   font-family: Nunito, sans-serif;
 }
-
+/* const [trajectory, setTrajectory] = useState("");
+const [trajectoryDuration, setTrajectoryDuration] = useState("");
+const [DepartureTime, setDepartureTime] = useState("");
+const [price, setPrice] = useState(""); */
 .focus-input::before {
   content: "";
   display: block;
@@ -119,8 +122,6 @@ body, html {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-
-
 
 .input:focus {
   outline: 0;

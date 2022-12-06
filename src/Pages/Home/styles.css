@@ -1,0 +1,128 @@
+.header {
+  height: 80px;
+  padding: 0 30px;
+  background: #6a7dfe;
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(to left, hsl(191, 98%, 56%), #b721ff);
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.ContainerShow {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: #fff;
+}
+.form {
+  width: 1200px;
+  align-items: top;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 33px 55px 33px 55px;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Col {
+  align-items: top;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px auto #b721ff;
+  background-color: #fff;
+}
+
+thead {
+  padding: 15px;
+  background: #6a7dfe;
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(to left, hsl(191, 98%, 56%), #b721ff);
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+tr {
+  cursor: pointer;
+  transition: 180ms all;
+  text-align: center;
+}
+tr:hover {
+  filter: brightness(0.98);
+}
+tr:nth-child(odd) > td {
+  background-color: #ffffff !important;
+}
+tr:nth-child(even) > td {
+  background-color: #ecf7fd;
+}
+d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnIcon {
+  background-color: transparent;
+  border: none;
+  align-items: right;
+  justify-content: right;
+  cursor: pointer;
+  size: 13px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  align-items: right;
+  justify-content: right;
+  cursor: pointer;
+  size: 13px;
+}
+
+.form {
+  width: auto;
+}
+
+.form-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  line-height: 1.2;
+  padding-bottom: 13px;
+}
+.form-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #333333;
+  margin: 0 auto;
+  margin-top: 13px;
+}
+.input {
+  width: auto;
+  text-align: center;
+  position: "relative";
+  left: "25%";
+  top: "10px";
+  border-radius: "5px";
+  padding: "10px";
+}

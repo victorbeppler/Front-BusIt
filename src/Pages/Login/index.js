@@ -14,7 +14,8 @@ export default function Login() {
   const [password, setPassword] = useState("");
   // eslint-disable-next-line
   // history.push("/home");
-  const loginButton = async () => {
+  const loginButton = async (event) => {
+    event.preventDefault();
     try {
       const userCreate = await baseBack.post(`/user/login`, {
         email: email,
@@ -32,7 +33,7 @@ export default function Login() {
     <div className="container">
       <div className="container-login">
         <div className="wrap-login">
-          <form className="login-form">
+          <form className="login-form" onSubmit={loginButton}>
             <span className="login-form-title">
               <img src={logoImg} alt="Jovem Programador" />
             </span>
@@ -46,7 +47,6 @@ export default function Login() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <span className="focus-input" data-placeholder="Email"></span>
-              {/* setEmail("teste") */}
             </div>
 
             <div className="wrap-input">
@@ -60,7 +60,7 @@ export default function Login() {
             </div>
 
             <div className="container-login-form-btn">
-              <button onClick={loginButton} className="login-form-btn">
+              <button type="submit" className="login-form-btn">
                 Login
               </button>
             </div>
