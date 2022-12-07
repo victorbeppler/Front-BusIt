@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter forceRefresh={true}>
       <Switch>
-        <Route path="/login" exact component={Login} />
+        <Route path="/" exact component={Login} />
         <Route path="/register" exact component={Register} />
         <Route path="/home" exact component={Home} />
         <Route path="/teste" exact component={Teste} />
