@@ -31,7 +31,7 @@ html {
   background-color: #333;
   border-radius: 10px;
   overflow: hidden;
-  padding: 77px 55px 33px 55px;
+  padding: 10px 55px 33px 55px;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -46,13 +46,15 @@ html {
   color: azure;
   line-height: 1.2;
   text-align: center;
+  padding: 10px;
 }
 
 .login-form-title img {
-  width: 90px;
+  width: 175px;
 }
 
 .wrap-input {
+  text-align: left;
   width: 100%;
   position: relative;
   border-bottom: 2px solid #adadad;
@@ -60,6 +62,7 @@ html {
 }
 
 .input {
+  text-align: left;
   font-size: 15px;
   color: #fff;
   line-height: 1.2;

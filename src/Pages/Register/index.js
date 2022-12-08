@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { useHistory } from "react-router-dom";
-import logoImg from "../../assets/logo.png";
+import logoImg from "../../assets/busit.png";
 import baseBack from "../../config/http-base-url-back.js";
 
 import "./styles.css";

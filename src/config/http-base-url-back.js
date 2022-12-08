@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseBack = axios.create({
-    baseURL: "http://159.223.194.61:3005/api",
+    baseURL: "https://admin.victorbeppler.dev/api",
 });
 
 export default baseBack;
