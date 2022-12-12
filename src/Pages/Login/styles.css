@@ -62,6 +62,7 @@ html {
 }
 
 .input {
+  align-items: left;
   text-align: left;
   font-size: 15px;
   color: #fff;
@@ -76,6 +77,7 @@ html {
 }
 
 .focus-input {
+  text-align: left;
   position: absolute;
   display: block;
   width: 100%;
@@ -88,6 +90,7 @@ html {
 }
 
 .focus-input::before {
+  text-align: left;
   content: "";
   display: block;
   position: absolute;
@@ -107,6 +110,7 @@ html {
 }
 
 .focus-input::after {
+  text-align: left;
   font-family: Nunito, sans-serif;
   font-size: 15px;
   color: #999999;
@@ -125,22 +129,28 @@ html {
 }
 
 .input:focus {
+  text-align: left;
   outline: 0;
 }
 
 .input:focus + .focus-input::after {
+  text-align: left;
   top: -15px;
 }
 
 .input:focus + .focus-input::before {
+  text-align: left;
+
   width: 100%;
 }
 
 .has-val + .focus-input::after {
+  text-align: left;
   top: -15px;
 }
 
 .has-val + .focus-input::before {
+  text-align: left;
   width: 100%;
 }
 

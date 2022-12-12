@@ -45,6 +45,7 @@ export default function Login() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  styles={{alignItems: 'left'}}
                 />
                 <span className="focus-input" data-placeholder="Email"></span>
               </div>

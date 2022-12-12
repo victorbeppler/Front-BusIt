@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   font-family: Nunito, sans-serif;
 }
 
@@ -74,6 +75,7 @@ body, html {
 }
 
 .focus-input {
+  text-align: left;
   position: absolute;
   display: block;
   width: 100%;
@@ -86,6 +88,7 @@ body, html {
 }
 
 .focus-input::before {
+  text-align: left;
   content: "";
   display: block;
   position: absolute;
@@ -105,6 +108,7 @@ body, html {
 }
 
 .focus-input::after {
+  text-align: left;
   font-family: Nunito, sans-serif;
   font-size: 15px;
   color: #999999;
@@ -122,29 +126,33 @@ body, html {
   transition: all 0.4s;
 }
 
-
-
 .input:focus {
+  text-align: left;
   outline: 0;
 }
 
-.input:focus+.focus-input::after {
+.input:focus + .focus-input::after {
+  text-align: left;
   top: -15px;
 }
 
-.input:focus+.focus-input::before {
+.input:focus + .focus-input::before {
+  text-align: left;
   width: 100%;
 }
 
-.has-val+.focus-input::after {
+.has-val + .focus-input::after {
+  text-align: left;
   top: -15px;
 }
 
-.has-val+.focus-input::before {
+.has-val + .focus-input::before {
+  text-align: left;
   width: 100%;
 }
 
 .container-login-form-btn {
+  text-align: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
